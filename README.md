@@ -1,18 +1,18 @@
 # Python Cheat Sheet
 ## Vocabulary
 
-*Boolean* - Data type for True or False values  
-*Comments* - Using a ‘#’  so Python will ignore anything afterward  
-*Computer programs* - How a computer does everything it does  
-*Float* - Data type for numbers with decimal point  
-*Integer* - Data type for numbers with no decimal point  
-*Library* - A collection of code that others have written that we can access and use  
-*Open Source* - How the program is written is is available publicly. (E.g. Chrome is not fully open source, Firefox is)  
-*Pandas* - A data science library we will use  
-*Programming* - Coding, writing of computer programs  
-*Python* - The programming language we will be using for this course  
-*String* - Data type for words and letters  
-*Variable* - Named unit of data that is assigned a value  
+**Boolean** - Data type for True or False values  
+**Comments** - Using a ‘#’  so Python will ignore anything afterward  
+**Computer programs** - How a computer does everything it does  
+**Float** - Data type for numbers with decimal point  
+**Integer** - Data type for numbers with no decimal point  
+**Library** - A collection of code that others have written that we can access and use  
+**Open Source** - How the program is written is is available publicly. (E.g. Chrome is not fully open source, Firefox is)  
+**Pandas** - A data science library we will use  
+**Programming** - Coding, writing of computer programs  
+**Python** - The programming language we will be using for this course  
+**String** - Data type for words and letters  
+**Variable** - Named unit of data that is assigned a value  
 
 ## Print
 ```python

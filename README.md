@@ -73,16 +73,16 @@ print(truth)
 ```python
 hungry = True
 if hungry:
-	print("I am hungry")
+    print("I am hungry")
 else:
-	print("I am not hungry")
+    print("I am not hungry")
 ```
 
 ## Indentation
 ```python
 hungry = False
 if hungry:
-	print("I am hungry")
+    print("I am hungry")
 print("I print regardless of hunger")
 ```
 
@@ -93,32 +93,32 @@ _End day 4_
 # if, else
 num = 5
 if num % 2 == 0:
-	print("This is even")
+    print("This is even")
 else:
-	print("This is odd")
+    print("This is odd")
 
 # elif
 num = 5
 if num % 2 == 0:
-	print("This is even")
+    print("This is even")
 elif num % 3 == 0:
-	print("This number is odd and divisible by 3")
+    print("This number is odd and divisible by 3")
 ```
 
 ## Compound Conditionals (`and`, `or`)
 ```python
 num = 50
 if num > 0 and num % 2 == 0:
-	print("This number is a positive even number")
+    print("This number is a positive even number")
 
 if num < 0 or num > 100:
-	print("This number is either less than 0 or greater than 100")
+    print("This number is either less than 0 or greater than 100")
 ```
 
 ## Loops (`for`)
 ```python
 for x in range(1, 100):
-	print(x)
+    print(x)
 ```
 
 ## Lists
@@ -127,7 +127,7 @@ some_food = ["apples", "oranges", "mangoes"]
 
 # Print all items in the list
 for food in some_food:
-	print(food)
+    print(food)
 
 # Access one item in the list
 print(some_food[0])
@@ -161,7 +161,7 @@ print(our_dictionary)
 ```python
 # DEFINE a function
 def silly_function():
-	return 10
+    return 10
 
 # CALL a function
 x = silly_function()
@@ -169,7 +169,7 @@ print(x)
 
 # Parameters a, b
 def sum(a, b):
-	return a + b
+    return a + b
 
 print(sum(1, 2))
 ```

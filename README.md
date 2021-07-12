@@ -117,7 +117,7 @@ if num < 0 or num > 100:
 
 ## Loops (`for`)
 ```python
-for x in range(1, 100):
+for x in range(1, 101):
     print(x)
 ```
 

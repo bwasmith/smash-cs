@@ -135,6 +135,15 @@ print(some_food[0])
 # Change the value of an item in the list
 some_food[0] = "pasta"
 print(some_food[0])
+
+# Add item to list
+some_food.append("kiwi")
+
+# Get Length
+print(len(some_food))
+
+# Clear list
+some_food.clear()
 ```
 
 ## Dictionaries

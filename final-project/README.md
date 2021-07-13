@@ -1,7 +1,8 @@
 # Brendan Final Project
 ## Data Set
-[CSY1 Data - AP Testing](https://docs.google.com/spreadsheets/d/1VQtY14tJLG9z8MY4HWocnCGSQQL8W_Q1Zd8-whMdSHg/edit?usp=sharing)
-[Brendan-Final-Project | CodeHS](https://codehs.com/sandbox/id/brendan-final-project-yfiBc6)
+[CSY1 Data - AP Testing](https://docs.google.com/spreadsheets/d/1VQtY14tJLG9z8MY4HWocnCGSQQL8W_Q1Zd8-whMdSHg/edit?usp=sharing)  
+[Brendan-Final-Project | CodeHS](https://codehs.com/sandbox/id/brendan-final-project-yfiBc6)  
+[Data Science Lifecycle | CodeHS](https://codehs.com/lms/assignment/47313947)
 
 ## Statistical Question
 For the Calculus AB, is there a difference in the average pass rate for females vs males vs nonbinary? 

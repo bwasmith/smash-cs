@@ -36,8 +36,10 @@ Another Pass Rate:  0.5914
 ## Conclusion
 My results show me that the pass rates across gender boundaries is very similar. This shows me equal competence across genders. 
 
+I was also surprised to see that the number of females and males taking the test was very similar. I did not expect this. 
+
 ## Further Research
-I would like to find out the pass rates across both gender and race information. 
+I would like to find out the pass rates across both gender and race. 
 
 Is there a certain identifying race which has the largest disparity across their genders in their pass rates? 
 

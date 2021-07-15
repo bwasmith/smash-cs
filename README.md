@@ -56,17 +56,18 @@ print(sum)
 
 ## Comparisons
 ```python
+lies_variable = 10 == 5
+print(lies_variable)
+
+truth_variable = 10 != 5
+print(truth_variable)
+
 # == Equals
 # != Not Equals
 # < Less than
 # <= Less than or equal to
 # > Greater than
 # >= Greater than or equal to
-
-lies = 10 == 5
-print(lies)
-truth = 10 != 5
-print(truth)
 ```
 
 ## Conditionals (`if` statements)
@@ -139,11 +140,24 @@ print(some_food[0])
 # Add item to list
 some_food.append("kiwi")
 
-# Get Length
-print(len(some_food))
-
 # Clear list
 some_food.clear()
+```
+
+```python
+some_numbers = [18, 24, -3, 6]
+
+# Get Length
+length = len(some_numbers)
+
+# Get Sum
+sum = sum(some_numbers)
+
+# Get Max
+max = max(some_numbers)
+
+# Get Min
+min = min(some_numbers)
 ```
 
 ## Dictionaries
@@ -154,7 +168,7 @@ our_dictionary = {
 }
 
 # Access an element in a dictionary
-print(our_dictionary["element1"])
+some_value = our_dictionary["element1"]
 
 # Change an element in a dictionary
 our_dictionary["element1"] = "new value"
@@ -177,10 +191,10 @@ x = silly_function()
 print(x)
 
 # Parameters a, b
-def sum(a, b):
+def my_sum_function(a, b):
     return a + b
 
-print(sum(1, 2))
+some_number = my_sum_function(1, 2)
 ```
 
 ## Imports

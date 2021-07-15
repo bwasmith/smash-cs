@@ -9,7 +9,7 @@ print(data.head())
 ```
 
 ## Series
-### Simple defintion
+### Simple Series Defintion (Creation)
 ```python
 pies = pd.Series(["Pumpkin", "Pecan", 3.14, "Lemon Meringue", "Apple"])
 
@@ -18,7 +18,7 @@ print("pies[2] = " + str(pies[2]))
 print(pies)
 ```
 
-### List/index and Dictionary definition 
+### Series Definition (Creation) by w/ Index and Dictionary  
 ```python
 ingredients = pd.Series(["4 cups", "1 cup", "2 large", "1 cup"], index=["Flour", "Milk", "Eggs", "Sugar"])
 
@@ -33,20 +33,39 @@ world_series = pd.Series(s)
 print(world_series)
 ```
 
-### Mean median mode
+### Mean Median Mode 1.7.6
 ```python
 hot_dog_winners = pd.Series([72.0, 41.0, 70.0, 38.0, 62.0, 38.0, 61.0, 34.0, 69.0, 36.8],
               index=["Joey Chestnut", "Miki Sudo", "Joey Chestnut", "Miki Sudo", 
               "Matthew Stonie", "Miki Sudo", "Joey Chestnut" ,"Miki Sudo",
               "Joey Chestnut", "Sonya Thomas"])
 
-print(hot_dog_winners)
-print(hot_dog_winners.mean())
-print(hot_dog_winners.median())
-print(hot_dog_winners.mode())
+mean = hot_dog_winners.mean()
+median = hot_dog_winners.median()
+mode = hot_dog_winners.mode()
 ```
 
-### Columns
+### Measures of Spread(Variance and Standard Deviation) 1.8.4
+```python
+people_named_anna = pd.Series([7288, 7118, 6846, 6808, 7523, 8564,
+    8565, 8337, 8378, 9098, 10588, 10588,
+    10385, 9443, 9514, 9101, 8601, 7888,
+    7265, 6800, 6326, 5658, 5615, 5378,
+    5679, 5125, 4775, 4520], index=["1990", "1991", "1992", "1993", "1994", "1995",
+    "1996", "1997", "1998", "1999", "2000", "2001", "2002", "2003", "2004", "2005",
+    "2006", "2007", "2008", "2009", "2010", "2011", "2012", "2013", "2014", "2015",
+    "2016", "2017"])
+    
+variance = people_named_anna.var()
+standard_deviation = people_named_anna.std()
+
+# Find the range using the max and min values
+max = people_named_anna.max()
+min = people_named_anna.min()
+range = max - min
+```
+
+### Get All Columns
 ```python
 for c in data.columns:
     print(c)

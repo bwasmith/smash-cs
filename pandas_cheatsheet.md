@@ -160,10 +160,16 @@ table[a:b] # rows a to b, not including b. [a:b)
 # Select specific columns
 sleep_data = mammals[["mammal", "hours_of_sleep"]]
 
-# Select rows based off of conditions
+# Select columns from a condition
 sleep_data[sleep_data["hours_of_sleep"] == 8]
 
-# Set the index to be a specific column
+# Select columns from multiple conditions
+# In Pandas `|` means OR and `&` means AND
+print(sleep_data[(sleep_data["hours_of_sleep"] == 8) |
+                 (sleep_data["hours_of_sleep"] < 4)])
+
+
+# Set the index to be a specific column. This changes the DataFrame
 mammals.set_index("mammal", inplace=True)
 mammals.reset_index(inplace=True)
 ```

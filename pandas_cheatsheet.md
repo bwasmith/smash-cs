@@ -135,29 +135,42 @@ print(mammals)
 ### DataFrame Info
 ```python
 # Lists data types used in each columns
-table.dtypes
+your_dataframe.dtypes
 
 # Number of rows and columns
-table.shape
+your_dataframe.shape
 
 # Returns data types used in each column in the dataframe
-table.info()
+your_dataframe.info()
 
 # Returns data types used in each column in the dataframe
-table.describe()
+your_dataframe.describe()
 # Round contents to nearest 1 decimal point
-round(table.describe(), 1)
+round(your_dataframe.describe(), 1)
 
 # Accessing Rows
-table.head(num) #first `num` rows
-table.tail(num) #last `num` rows
-table[a:b] # rows a to b, not including b. [a:b)
+your_dataframe.head(num) #first `num` rows
+your_dataframe.tail(num) #last `num` rows
+your_dataframe[a:b] # rows a to b, not including b. [a:b)
 ```
 
 
-### Selecting Columns
+### Selecting Columns, Set Index
 ```python
-# Select specific columns
+data = {"mammal": ["African Elephant", "Bottlenose Dolphin", "Cheetah", "Domestic Cat", "Giraffe", "Ground Squirrel", "Horse", "House Mouse", "Human", "Killer Whale", "Lion", "Pig", "Rabbit"],
+        "life_span": [70, 25, 14, 16, 25, 9, 25, 3, 80, 50, 15, 10, 5],
+        "hours_of_sleep": [3, 5, 12, 12, 2, 15, 3, 12, 8, 3, 20, 8, 11],
+        "speed": [40, 37, 110, 50, 50, 19, 69, 13, 45, 48, 80, 18, 56],
+        "diet": ["plants", "meat", "meat", "meat", "plants", "both", "plants", "both", "both", "meat", "meat", "both", "plants"]
+    }
+
+# format data into a DataFrame
+mammals = pd.DataFrame(data)
+
+# Select ONE specific column
+sleep_data_only = mammals["hours_of_sleep"]
+
+# Select MULTIPLE specific columns
 sleep_data = mammals[["mammal", "hours_of_sleep"]]
 
 # Select columns from a condition
@@ -173,3 +186,5 @@ print(sleep_data[(sleep_data["hours_of_sleep"] == 8) |
 mammals.set_index("mammal", inplace=True)
 mammals.reset_index(inplace=True)
 ```
+
+

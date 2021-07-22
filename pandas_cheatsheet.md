@@ -155,7 +155,7 @@ your_dataframe[a:b] # rows a to b, not including b. [a:b)
 ```
 
 
-### Selecting Columns, Set Index
+### Selecting Columns 1.10.4
 ```python
 data = {"mammal": ["African Elephant", "Bottlenose Dolphin", "Cheetah", "Domestic Cat", "Giraffe", "Ground Squirrel", "Horse", "House Mouse", "Human", "Killer Whale", "Lion", "Pig", "Rabbit"],
         "life_span": [70, 25, 14, 16, 25, 9, 25, 3, 80, 50, 15, 10, 5],
@@ -181,10 +181,83 @@ sleep_data[sleep_data["hours_of_sleep"] == 8]
 print(sleep_data[(sleep_data["hours_of_sleep"] == 8) |
                  (sleep_data["hours_of_sleep"] < 4)])
 
+```
 
+### Set Index 1.10.5
+```python
 # Set the index to be a specific column. This changes the DataFrame
 mammals.set_index("mammal", inplace=True)
 mammals.reset_index(inplace=True)
 ```
 
+### Custom Scoring Function 1.11.2
 
+Solution for 1.11.2
+```python 
+import pandas as pd
+
+coasters = pd.read_csv (r"data.csv")
+pd.set_option("display.max_columns", None) # Displays all columns
+print(coasters)
+
+
+# create a function that uses the ranking algorithm
+def ranking(speed, length, drop, duration):
+    return (4 * speed) + (3 * length) + (5 * drop) + (4 * duration)
+
+# use the function to create a new column with the calculations
+coasters["ranking"] = ranking(coasters["Speed"], coasters["Length"], coasters["Drop"],coasters["Duration"])
+
+# filter the table to display the name of the roller coaster and the
+# ranking
+filtered_table = coasters[["Coaster", "ranking"]]
+
+# find the max value of the ranking column
+max_value = coasters["ranking"].max()
+
+# filter for the row that corresponds with the max value
+row_with_max = filtered_table[coasters["ranking"] == max_value]
+
+# print the answer!
+print(row_with_max)
+```
+
+Second example for Custom Function
+```python
+import pandas as pd
+
+data = {"student": ["Anayo", "Brandon", "Claudia", "Dave", "Evelyn", "Finn", "Gloria", "Hank", "Isla", "Julia"],
+        "Test One": [84, 90, 50, 29, 49, 44, 30, 98, 31, 66],
+        "Test Two": [68, 78, 28, 80, 45, 56, 53, 93, 31, 66],
+        "Test Three": [42, 35, 30, 40, 28, 85, 80, 99, 38, 48]
+    }
+
+test_scores = pd.DataFrame(data)
+
+# Custom function
+# Input, Parameter: Three different test scores
+# Return: Average of these scores
+def average_score(test_one, test_two, test_three):
+    return (test_one + test_two + test_three) / 3
+
+# Create a new column "Average", and set it equal to the result of our custom function
+test_scores["Average"] = average_score(test_scores["Test One"], 
+                                test_scores["Test Two"], test_scores["Test Three"])
+
+# Similar custom function, done in a different way
+# Input, Parameter: a list of tests
+# Return: the average of this list
+def smarter_average_score(test_list):
+    return sum(test_list) / len(test_list)
+
+# Create a new column "Smarter Average", and set it equal to the result of our second custom function
+# Note that we must pass a list to our smarter_average_score function as a parameter
+test_scores["Smarter Average"] = smarter_average_score([test_scores["Test One"], 
+                                test_scores["Test Two"], test_scores["Test Three"]])
+
+print(test_scores)
+```
+
+### Counting Values
+
+### Correlation

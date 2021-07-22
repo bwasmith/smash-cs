@@ -259,5 +259,105 @@ print(test_scores)
 ```
 
 ### Counting Values 1.11.5
+Taken directly from exercise 1.11.5
+```python
+'''
+MY DATA TABLE:
+
+     name   favorite_ice_cream pineapple_on_pizza
+0   wells                  ube                yes
+1    lisa    cookies and cream                 no
+2   mikaa           strawberry                 no
+3     cam                  ube                 no
+4     sam            bubblegum                yes
+5     amy                  NaN                yes
+6  thomas  mint chocolate chip                 no
+'''
+import pandas as pd
+
+# Reading the data
+data = pd.read_csv('data.csv')
+
+print(data)
+
+# Use Pandas to count the distinct values in the 'favorite_ice_cream' column
+# This next line will print the counts
+print()
+print("Print count of distinct values of favorite ice cream:")
+print(data['favorite_ice_cream'].value_counts())
+
+# Print the counts in ascending order
+print()
+print("Print count of distinct values of favorite ice cream in ascending order:")
+print(data['favorite_ice_cream'].value_counts(ascending=True))
+
+# Print the counts and list missing values
+print()
+print("Print count of ice cream with missing values counted:")
+print(data['favorite_ice_cream'].value_counts(dropna=False))
+
+# Print the counts based on percentages
+print()
+print("Print counts as percentages:")
+print(data['favorite_ice_cream'].value_counts(normalize=True))
+```
 
 ### Correlation
+Taken directly from exercise 1.12.3
+```python
+import pandas as pd
+
+print("Cups of Boba Example")
+print("====================")
+
+# Create the DataFrame for the cups of boba example
+order_data = pd.DataFrame({
+    'Customer': ['Wells', 'Sam', 'Amy'], 
+    'Order Quantity': [10, 5, 3],
+    'Order Price': [49, 24, 15]
+})
+print(order_data)
+
+# Do you remember what type of correlation occured in this example?
+
+# Notice that when you run this code, Pandas outputs a table
+
+# Each entry in the table tells you the correlation value between the attributes
+# listed in the row and column
+
+# Notice the values of 1 along the diagonal of the table, when the attribute
+# listed in the row and column are the same. Is this what you would expect?
+correlation = order_data.corr()
+print(correlation)
+
+print()
+print("Elevation Example")
+print("====================")
+
+elevation_data = pd.DataFrame({
+    'Elevation': [0, 2000, 6000], 
+    'Temperature': [90, 83, 70],
+})
+print(elevation_data)
+
+# What example of correlation is this?
+correlation = elevation_data.corr()
+print(correlation)
+
+print()
+print("No Correlation Example")
+print("======================")
+
+no_corr_data = pd.DataFrame({
+    'Cups of boba': [5, 10, 1, 5, 2],
+    'Temperature': [90, 83, 70, 60, 100],
+})
+print(no_corr_data)
+
+# Notice that the correlation values here are close to 0
+correlation = no_corr_data.corr()
+print(correlation)
+
+# corr() is a very useful function to look for relationships between all of
+# the columns in your dataset!
+```

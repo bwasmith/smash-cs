@@ -143,7 +143,7 @@ your_dataframe.shape
 # Returns data types used in each column in the dataframe
 your_dataframe.info()
 
-# Returns data types used in each column in the dataframe
+# Returns statistics for each column in the dataframe
 your_dataframe.describe()
 # Round contents to nearest 1 decimal point
 round(your_dataframe.describe(), 1)
